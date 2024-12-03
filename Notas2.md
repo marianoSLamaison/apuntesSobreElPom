@@ -87,22 +87,22 @@ para esto o bien configuras o agregas plugins.
 El ejemplo a continuación permite hacer que maven acepte 
 programas escritos en java 5.0
 
->``
-...
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-compiler-plugin</artifactId>
-      <version>3.3</version>
-      <configuration>
-        <source>1.5</source>
-        <target>1.5</target>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
-...
+>````
+>...
+><build>
+>  <plugins>
+>    <plugin>
+>      <groupId>org.apache.maven.plugins</groupId>
+>      <artifactId>maven-compiler-plugin</artifactId>
+>      <version>3.3</version>
+>      <configuration>
+>        <source>1.5</source>
+>        <target>1.5</target>
+>      </configuration>
+>    </plugin>
+>  </plugins>
+></build>
+>...
 >
 
 La seccion que dice `<configuration></configuration>` esta dedicada a pasar argumentos para maven ( tengo entendido )
@@ -137,33 +137,33 @@ nada.
 A veces necesitas pasarle valores a un archivo, pero esos valores solo pueden pasarse durante
 el proceso de compilado, para esto maven ofrece el siguiente procedimiento
 
->``
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>Maven Quick Start Archetype</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
-  </build>
-</project>
+>````
+><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+>  <modelVersion>4.0.0</modelVersion>
+>  <groupId>com.mycompany.app</groupId>
+>  <artifactId>my-app</artifactId>
+>  <version>1.0-SNAPSHOT</version>
+>  <packaging>jar</packaging>
+>  <name>Maven Quick Start Archetype</name>
+>  <url>http://maven.apache.org</url>
+>  <dependencies>
+>    <dependency>
+>      <groupId>junit</groupId>
+>      <artifactId>junit</artifactId>
+>      <version>4.11</version>
+>      <scope>test</scope>
+>    </dependency>
+>  </dependencies>
+>  <build>
+>    <resources>
+>      <resource>
+>        <directory>src/main/resources</directory>
+>        <filtering>true</filtering>
+>      </resource>
+>    </resources>
+>  </build>
+></project>
 >
 
 En este ejemplo se a primero, con la etiqueta `<filtering>true</filtering>` se a aclarado que 
@@ -180,10 +180,10 @@ por fuera de el *POM*
 
 tambien puedes definir valores desde el *POM* si no te parece que llena demaciado el archivo
 EJ
->``
-  <properties>
-    <my.filter.value>hello</my.filter.value>
-  </properties>
+>````
+>  <properties>
+>    <my.filter.value>hello</my.filter.value>
+>  </properties>
 >
 
 ## Dependencias externas
@@ -191,22 +191,22 @@ EJ
 Son las cosas que nuestro projecto necesita para trabajar, son declaradas en el pom como en el
 siguiente ejemplo
 
->``
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-other-app</artifactId>
-  ...
-  <dependencies>
-    ...
-    <dependency>
-      <groupId>com.mycompany.app</groupId>
-      <artifactId>my-app</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
-</project>
+>````
+><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+></project>  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+>  <groupId>com.mycompany.app</groupId>
+>  <artifactId>my-other-app</artifactId>
+>  ...
+>  <dependencies>
+>    ...
+>    <dependency>
+>      <groupId>com.mycompany.app</groupId>
+>      <artifactId>my-app</artifactId>
+>      <version>1.0-SNAPSHOT</version>
+>      <scope>compile</scope>
+>    </dependency>
+>  </dependencies>
+></project>
 >
 
 El programa primero revisara si la dependencia ya esta instalada, y si no lo esta intentara instalarla
