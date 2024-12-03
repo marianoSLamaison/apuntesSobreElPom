@@ -73,9 +73,9 @@ sus hijos, debes de seguir los siguientes pasos.
 - recuerdale al padre quienes son sus hijos y sus ubicaciónes con:
 >```
 ><modules>
->   <module>moduelo1</moduel>
+>   <module>moduelo1</module>
 >   ....
->   <module>modulon</moduel>
+>   <module>moduloN</module>
 ></modules>
 
 ### Notas de lo que interprete del tutorial:
