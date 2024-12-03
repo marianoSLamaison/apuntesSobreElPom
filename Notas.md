@@ -11,15 +11,17 @@ controlar versiones de projecto, controlar releases, organizar projectos por mod
 Un archivo tipo *POM* es un .xml que usa Maven para saver como traar a tu projecto, contiene toda o casi toda la informacion que maven necesita para saver como trabajar con tu projecto. 
     Puedes crear un *POM* basico con el quick-start de maven pero tambien
 existe el *POM* mas basico posible EJ:
->&lt;project&gt;
+>```
+><project>
 >
->   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+>   <modelVersion>4.0.0</modelVersion>
 >
->   &lt;groupId&gt;example-name&lt;/groupId&gt;
->   &lt;artifactId&gt;example-name&lt;/artifactId&gt;
->   &lt;version&gt;algun numero&lt;/version&gt;
+>   <groupId>example-name</groupId>
+>   <artifactId>example-name</artifactId>
+>   <version>algun numero</version>
 >
->&lt;/project&gt;
+></project>
+
 Donde la version de modelo o <modelVersion>de momento es obligatorio que sea "4.0.0"
 Un *POM* tambien puede especificar cosas como "donde estan los sources" 
 o "donde dejo la compilacion" Esto en caso de no especificarse, se resuelve siguiendo la estructura estandar de directorios de maven la cual se ve en este ejemplo.
@@ -61,18 +63,20 @@ sirve tener una lista de pasos para cuando tienes esa situación.
 sus hijos, debes de seguir los siguientes pasos.
 - Cambia el _&lt;packagin>_ del *POM* padre a _*pom*_
 - Referencia al padre en cada hijo con 
->&lt;parent&gt;
->   &lt;artifactId&gt;algo&lt;/artifactId&gt;
->   &lt;groupId&gt;algo&lt;/groupId&gt;
->   &lt;version&gt;algo&lt;/version&gt;
->   &lt;relativePath&gt;solo si tu estructura no es la normal&lt;/relativePath&gt;
->&lt;/parent&gt;
+>````
+><parent>
+>   <artifactId>algo</artifactId>
+>   <groupId>algo</groupId>
+>   <version>algo</version>
+>   <relativePath>solo si tu estructura no es la normal</relativePath>
+></parent>
 - recuerdale al padre quienes son sus hijos y sus ubicaciónes con:
->&lt;modules&gt;
->   &lt;module&gt;moduelo1&lt;/moduel&gt;
+>```
+><modules>
+>   <module>moduelo1</moduel>
 >   ....
->   &lt;module&gt;modulon&lt;/moduel&gt;
->&lt;/modules&gt;
+>   <module>modulon</moduel>
+></modules>
 
 ### Notas de lo que interprete del tutorial:
 No es necesario que los modulos esten relacionados, aveces puede que 
@@ -110,10 +114,11 @@ y define el formato en el que se escribira la fecha de una build
 
 luego puedes hacer cosas como definir tus propias variables, eso se hace
 con la tag &lt;properties&gt;&lt;/properties&gt; un codigo de ejemplo seria
->&lt;properties&gt;
->   &lt;variable1&gt;.....&lt;/variable1&gt;
+>````
+><properties>
+>   <variable1>.....</variable1>
 >   ......
->   &lt;variableN&gt;.....&lt;/variableN&gt;
->&lt;/properties&gt;
+>   <variableN>.....</variableN>
+></properties>
 luego una vez ya definidas, las variables son referenciadas en codigo usando "<span style = "color:orange">" {$nombre_de_tu_variable}</span>
 Este mismo principio aplica para las variables de projecto.
