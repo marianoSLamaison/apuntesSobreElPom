@@ -2,6 +2,8 @@ package orange_team;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.InputStream;
+
 import org.junit.jupiter.api.Test;
 
 /**
@@ -15,5 +17,11 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() {
         assertTrue(true);
+    }
+    @Test
+    public void leerUnRecursoDeMemoria()
+    {
+        InputStream input = getClass().getResourceAsStream("/jerma.png");
+        assertTrue(input != null);
     }
 }
