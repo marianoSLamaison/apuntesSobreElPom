@@ -120,5 +120,5 @@ con la tag &lt;properties&gt;&lt;/properties&gt; un codigo de ejemplo seria
 >   ......
 >   <variableN>.....</variableN>
 ></properties>
-luego una vez ya definidas, las variables son referenciadas en codigo usando "<span style = "color:orange">" {$nombre_de_tu_variable}</span>
+luego una vez ya definidas, las variables son referenciadas en codigo usando <span style = "color:orange">{$nombre_de_tu_variable}</span>
 Este mismo principio aplica para las variables de projecto.
