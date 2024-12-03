@@ -8,12 +8,12 @@ presumira que esta herendando las del padre.
 El hijo buscara a su padre si se suigue la estructura que aqui se presenta,
 donde es un directorio hijo dentro del directorio padre,
 pero de no tenerlos asi, va a tener que aclararse una ruta 
-con la tag _"<relativePath>"_ la cual sirve para escribir un path relativo
+con la tag _"&lt;relativePath&gt;"_ la cual sirve para escribir un path relativo
 el cual tiene que terminar en el *POM* de el direcotrio padre
 
 ## Etiquetas importantes de recordad
-1. _*<parent></parent>*_ _(Aclara el padre del modulo)_
-2. _*<relativePath><relativePath>*_ _(Aclara el path al *POM* padre, relativo al hijo)_
+1. _*&lt;parent&gt;&lt;/parent&gt;*_ _(Aclara el padre del modulo)_
+2. _*&lt;relativePath&gt;&lt;relativePath&gt;*_ _(Aclara el path al *POM* padre, relativo al hijo)_
 
 ## Resumen
 Esto es solo para que el *POM* hijo pueda reconocer y heredar del padre.
